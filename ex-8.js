@@ -375,4 +375,4 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+const totalPaidByLocation;

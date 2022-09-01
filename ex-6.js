@@ -1,4 +1,5 @@
 const carCollection = ["toyota", "fiat", "honda", "bmw"];
+
 function updateCarCollection(carBrand) {
 	// Start coding here
 }
