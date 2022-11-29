@@ -372,5 +372,5 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-
+let totalPaidByMember;
 // Start coding here
