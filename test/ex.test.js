@@ -5,6 +5,9 @@ describe("Build-in Array Function tests cases", () => {
   beforeAll(() => {
     jest.spyOn(console, "log");
   });
+  afterAll(() => {
+    jest.resetAllMocks();
+  });
 
   test("exercise 1: Total Paid Amount", async () => {
     const data = await fs.readFile("./ex-1.js");
