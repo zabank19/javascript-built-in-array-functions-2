@@ -372,5 +372,11 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-let totalTransactions;
+
 // Start coding here
+function sum(accumulator, currentValue) {
+  return accumulator + currentValue.total;
+}
+
+let sumTotal = bills.reduce(sum, 0);
+console.log(`Total bill transaction is ${sumTotal}`);

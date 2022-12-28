@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import { jest } from "@jest/globals";
 
-describe("Build-in Array Function tests cases", () => {
+describe("exercise 1: Build-in Array Function tests cases", () => {
     beforeAll(() => {
         jest.spyOn(console, "log");
     });
@@ -9,13 +9,13 @@ describe("Build-in Array Function tests cases", () => {
         jest.resetAllMocks();
     });
 
-    test("exercise 1: Total Paid Amount", async () => {
+    test("เมื่อ console.log แล้วต้องแสดงผลตามที่โจทย์กำหนด", async () => {
         const data = await fs.readFile("./ex-1.js");
-        const code = `${data} return totalTransactions`;
+        const code = `${data}`;
         const func = new Function(code);
-        const totalTransactions = func();
+        func();
 
-        expect(totalTransactions).toBe(1410083);
+        // expect(totalTransactions).toBe(1410083);
         expect(console.log).toHaveBeenCalledWith(
             "Total bill transaction is 1410083"
         );

@@ -373,5 +373,11 @@ const bills = [
   },
 ];
 
-let totalMembers;
 // Start coding here
+
+function filterNull(input) {
+  return input.member !== null;
+}
+
+const newBills = bills.filter(filterNull);
+console.log(newBills);

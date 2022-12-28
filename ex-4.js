@@ -372,5 +372,26 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-let totalPaidByMember;
+
 // Start coding here
+function filterNull(input) {
+  return input.member !== null;
+}
+
+function pullMemberName(input) {
+  return input.member.name;
+}
+
+function distinguishMember(accumulator, currentValue) {
+  if (!accumulator.includes(currentValue)) {
+    accumulator.push(currentValue);
+  }
+  return accumulator;
+}
+
+const totalMembers = bills
+  .filter(filterNull)
+  .map(pullMemberName)
+  .reduce(distinguishMember, []);
+
+console.log("Unique Members Count: ", totalMembers.length);
