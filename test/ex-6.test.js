@@ -11,15 +11,15 @@ describe("exercise 6: Build-in Array Function tests cases", () => {
 
     test("เมื่อ console.log แล้วต้องแสดงผลตามที่โจทย์กำหนด", async () => {
         const data = await fs.readFile("./ex-6.js");
-        const code = `${data} return updateCarCollection`;
+        const code = `${data} \n return updateCarCollection`;
 
         const func = new Function(code);
         const updateCarCollection = func();
 
-        expect(...console.log.mock.calls[0]).toStrictEqual(
-            "new car collection is : toyota,fiat,honda,bmw,audi"
+        expect(updateCarCollection("audi")).toStrictEqual(
+            "audi has already existed in the 5 position of car collection."
         );
-        expect(...console.log.mock.calls[1]).toStrictEqual(
+        expect(updateCarCollection("toyota")).toStrictEqual(
             "toyota has already existed in the 1 position of car collection."
         );
     });

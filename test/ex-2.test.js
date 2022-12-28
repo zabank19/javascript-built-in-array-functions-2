@@ -207,7 +207,6 @@ describe("exercise 2: Build-in Array Function tests cases", () => {
             }
         ]
 
-
         expect(newBills).toStrictEqual(result)
     });
 });
