@@ -19,8 +19,11 @@ describe("exercise 6: Build-in Array Function tests cases", () => {
         expect(updateCarCollection("audi")).toStrictEqual(
             "audi has already existed in the 5 position of car collection."
         );
+
         expect(updateCarCollection("toyota")).toStrictEqual(
             "toyota has already existed in the 1 position of car collection."
         );
+        expect(console.log.mock.calls[0][0]).toMatch(/new car collection is : toyota,fiat,honda,bmw,audi./)
+        expect(console.log.mock.calls[1][0]).toMatch(/toyota has already existed in the 1 position of car collection./)
     });
 });
