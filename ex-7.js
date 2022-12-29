@@ -1,5 +1,5 @@
 function isPalindrome(string) {
-	// Start coding here
+  // Start coding here
 }
 
 //Example case
