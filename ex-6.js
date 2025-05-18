@@ -2,6 +2,16 @@ const carCollection = ["toyota", "fiat", "honda", "bmw"];
 
 function updateCarCollection(carBrand) {
   // Start coding here
+  const lowerCaseBrand = carBrand.toLowerCase();
+
+  const index = carCollection.indexOf(lowerCaseBrand);
+    if (index !== -1) {
+    return `${carBrand} already exists in position ${index} of the car collection.`;
+  } else {
+    carCollection.push(lowerCaseBrand);
+
+    return `New car collection is: ${carCollection.map(car => car.charAt(0).toUpperCase() + car.slice(1)).join(", ")}`;
+  }
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case
